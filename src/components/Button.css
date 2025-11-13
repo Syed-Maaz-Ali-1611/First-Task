@@ -1,0 +1,145 @@
+.button-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  width: 280px; 
+  border: 1px solid #e1e5e9;
+}
+
+.button-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.button-title {
+  font-size: 16px; 
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  margin: 0;
+}
+
+.checkbox-item:hover {
+  background: #f8f9fa;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-left: 8px;
+  order: 2; 
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-item:hover .checkmark {
+  border-color: #007bff;
+}
+
+.checkbox-input:checked ~ .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.page-label {
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+  order: 1; 
+  flex-grow: 1;
+}
+
+.done-button {
+  background: #ffc107; 
+  color: #000; 
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+  font-family: inherit;
+  width: 100%;
+}
+
+/* Separator style */
+.separator {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.done-button:hover {
+  background: #ffd75f;
+  color: #000;
+}
+
+.done-button:active {
+  background: #d39e00;
+  transform: translateY(1px);
+}
+
+.done-button:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+.checkbox-input:focus ~ .checkmark {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
