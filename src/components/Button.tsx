@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Button.css';
 
 interface PageItem {
@@ -58,8 +58,8 @@ const Button: React.FC = () => {
   return (
     <div className="button-container">
       <div className="pages-list">
-        {pages.map((page, index) => (
-          <React.Fragment key={page.id}>
+        {pages.map((page) => (
+          <div key={page.id}>
             <label className="page-item checkbox-item">
               <input
                 type="checkbox"
@@ -72,7 +72,7 @@ const Button: React.FC = () => {
             </label>
             {/* Add separator after "All pages" */}
             {page.id === 'all' && <div className="separator"></div>}
-          </React.Fragment>
+          </div>
         ))}
         <button 
           className="done-button"
@@ -84,4 +84,5 @@ const Button: React.FC = () => {
     </div>
   );
 };
+
 export default Button;
